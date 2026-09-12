@@ -9,8 +9,10 @@
 
 >3 Inheritance
 ## Problem : Create an ElectricCar class that inherits from the Car class and has an additional attribute battery_size.
+
 >4 Encapsulation
-## Problem : 
+## Problem : Modify the Car class to encapsulate the brand attribute, making it private, and provide a getter method for it.
+
 >5 Class Variables
 >6 Static Method
 >7 Property Decorators
