@@ -20,6 +20,12 @@
 #### Problem : Add a class variable to Car class that keeps track of the number of cars created.
 
 ## >7 Static Method
+#### Problem : Add a static method to the Car class that returns a general description of a car.
+
 ## >8 Property Decorators
+#### Problem : Use a property decorator in the Car class to make the model attribute read-only.
+
 ## >9 Class Inheritance and isinstance() function
+
+
 ## >10 Multiple Inheritance

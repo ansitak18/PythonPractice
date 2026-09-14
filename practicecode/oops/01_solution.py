@@ -6,22 +6,30 @@ class Car:
 
     def __init__(self, brand, model): #self works as this works in js
         self.__brand = brand
-        self.model = model
+        self.__model = model
         Car.total_cars += 1 # or self.total_car
 
 
 
-    # 4th question about encapsualtion making private variable by adding two underscore __attributename
+# 4th question about encapsualtion making private variable by adding two underscore __attributename
     def get_brand(self):
         return self.__brand + "!" # can add more characters by simply using + 
     
 #2nd question 
     def full_name(self):
-        return f"{self.__brand} {self.model}"
+        return f"{self.__brand} {self.__model}"
 
 #for polymorphism
     def fuel_type(self):
         return 'Petrol or Diesel'
+
+#for Static method 
+    @staticmethod #this is a decorator 
+    def general_description():
+        return 'Cars are one of the means of transport'
+    @property
+    def model(self):
+        return self.__model
     
 #inheritance 3rd question
 class ElectricCar(Car): 
@@ -43,11 +51,22 @@ print(Car.total_cars) #correct way
 
 my_car = Car("Toyota", "Corolla") #object created without holding any reference for the object created
 #print(my_car.brand) #does not give direct access because brand attribute is now private
+#my_car.model = "City" #we can access the model and also update it if we want but only if we dont make it private
+
 print(my_car.model)
+
 print(my_car.full_name()) #2nd question
 print(my_car.fuel_type()) #polymorphism
 my_new_car = Car("Tata", "Safari")
 print(my_new_car.model)
+
+#static method (and we dont use self keyword while creating method in static form)
+#print(my_car.general_description()) #objects cannot access the static methods 
+print(Car.general_description()) #Cars are one of the means of transport
+
+
+#Property decorators - we have to make the model read-only 
+print(my_car.model)
 
 #accessing private attributes - encapsulation
 #print(my_car.__brand) #does not give direct access as it is declared as private in above code
